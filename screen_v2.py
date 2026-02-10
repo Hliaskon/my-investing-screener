@@ -290,8 +290,11 @@ for _, row in u.iterrows():
     except Exception:
         shr_change = np.nan
 
-    cash_to_mcap = safe_div((bs_.loc.get("Cash And Cash Equivalents", pd.Series([np.nan])).iloc[0] if bs_ is not None else np.nan), mcap)
-    p_to_fcf = safe_div(mcap, fcf) if pd.notna(fcf) and fcf > 0 else np.nan
+    try:
+        cash_eq = bs_.loc["Cash And Cash Equivalents"].iloc[0]
+    except Exception:
+        cash_eq = np.nan
+    cash_to_mcap = safe_div(cash_eq, mcap)
 
     # ---------------- Soros macro-stress proxies ----------------
     sector = (info.get("sector") or "").lower()
