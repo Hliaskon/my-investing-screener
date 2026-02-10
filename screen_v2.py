@@ -295,6 +295,11 @@ for _, row in u.iterrows():
     except Exception:
         cash_eq = np.nan
     cash_to_mcap = safe_div(cash_eq, mcap)
+        # Price-to-FCF (lower is better); guard against missing/negative FCF
+    if pd.notna(fcf) and fcf > 0:
+        p_to_fcf = safe_div(mcap, fcf)
+    else:
+        p_to_fcf = np.nan
 
     # ---------------- Soros macro-stress proxies ----------------
     sector = (info.get("sector") or "").lower()
