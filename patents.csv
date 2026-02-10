@@ -1,0 +1,6 @@
+ticker,patent_count,forward_citations,rd_to_sales,notes
+ASML,20300,145000,0.135,"EUV/High-NA"
+MSFT,65000,82000,0.128,"Cloud/AI"
+NVDA,18000,45000,0.240,"Accelerators & packaging"
+RELX,2500,6200,0.060,"Data/IP platforms"
+LSEG.L,1800,4100,0.050,"Data/exchange stack"
