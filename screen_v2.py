@@ -436,6 +436,53 @@ df[out_cols].sort_values("meta_score", ascending=False).to_csv(
     os.path.join(OUT_DIR, "screen_results_v2.csv"), index=False
 )
 
+# -------- EU number formatting (thousand '.' and decimal ',') --------
+def _fmt_num(x):
+    """Format plain numbers with EU separators, 2 decimals."""
+    try:
+        if pd.isna(x): 
+            return ""
+        return f"{float(x):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except Exception:
+        return ""
+
+def _fmt_int(x):
+    """Format integers with EU separators (no decimals)."""
+    try:
+        if pd.isna(x): 
+            return ""
+        return f"{int(x):,}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except Exception:
+        return ""
+
+def _fmt_pct(x):
+    """Format decimals (e.g., 0.1234) as percent '12,34 %' with EU separators."""
+    try:
+        if pd.isna(x):
+            return ""
+        return f"{float(x)*100:,.2f} %".replace(",", "X").replace(".", ",").replace("X", ".")
+    except Exception:
+        return ""
+
+# --- Apply formatting to selected columns (strings for CSV display) ---
+# Currency-like numbers
+df["price"] = df["price"].apply(_fmt_num)          # price in listing currency (symbol not embedded)
+# market_cap can be huge; keep 2 decimals for consistency (or switch to _fmt_int if you prefer no decimals)
+df["market_cap"] = df["market_cap"].apply(_fmt_num)
+
+# Percent fields
+for col in ["roic_est","ebit_margin","fcf_margin","fcf_yield","cash_to_mcap"]:
+    df[col] = df[col].apply(_fmt_pct)
+
+# Ratios (dimensionless)
+for col in ["PEG","PEGY","p_to_fcf","weekly_ac","vol_clust","ret_pred"]:
+    df[col] = df[col].apply(_fmt_num)
+
+# Keep the five sub-scores + meta_score as numeric with dot decimal (so sorting in CSV remains correct)
+score_cols = ["buffett_score","lynch_score","icahn_score","soros_score","simons_score","meta_score"]
+for sc in score_cols:
+    df[sc] = df[sc].round(2)
+
 # Markdown summary
 top = df.sort_values("meta_score", ascending=False).head(20)
 md = top[[
