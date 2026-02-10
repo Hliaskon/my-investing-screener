@@ -1,0 +1,36 @@
+name: weekly-screen-v2
+
+on:
+  schedule: [{cron: "0 6 * * 1"}]   # every Monday 06:00 UTC
+  workflow_dispatch: {}             # allows you to run it manually
+
+permissions:
+  contents: write                   # allow the workflow to commit files
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --upgrade yfinance pandas numpy scipy tabulate
+
+      - name: Run screener
+        run: python screen_v2.py
+
+      - name: Commit results
+        run: |
+          git config user.name "screen-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add outputs/screen_results_v2.csv outputs/screen_report_v2.md outputs/factor_explain_v2.md
+          git commit -m "weekly v2 refresh: $(date -u +'%Y-%m-%d')" || echo "Nothing to commit"
+          git push
