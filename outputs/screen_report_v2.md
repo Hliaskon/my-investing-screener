@@ -1,25 +1,25 @@
-# Weekly Screen — v2 (2026-03-02)
+# Weekly Screen — v2 (2026-03-08)
 
 Top 20 by **Meta‑Score** (combined Buffett/Lynch/Icahn/Soros/Simons):
 
 | ticker   | region   | sector             |   meta_score |   buffett_score |   lynch_score |   icahn_score |   soros_score |   simons_score | roic_est   | fcf_yield   | PEGY   | cash_to_mcap   | p_to_fcf   |
 |:---------|:---------|:-------------------|-------------:|----------------:|--------------:|--------------:|--------------:|---------------:|:-----------|:------------|:-------|:---------------|:-----------|
-| MSFT     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          62.85 |            |             | 0,16   | 1,04 %         |            |
-| ASML     | EU       | Technology         |          nan |             nan |           nan |           nan |           nan |          46.57 |            |             | 0,73   | 2,27 %         |            |
-| LIN      | EU       | Basic Materials    |          nan |             nan |           nan |           nan |           nan |          54.13 |            |             |        | 2,15 %         |            |
-| SU.PA    | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          64.5  |            |             |        | 4,43 %         |            |
-| SIE.DE   | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          43.35 |            |             |        | 7,48 %         |            |
-| RELX     | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          90.28 |            |             | 1,17   | 0,19 %         |            |
-| LSEG.L   | EU       | Financial Services |          nan |             nan |           nan |           nan |           nan |          48.59 |            |             | 0,58   | 4,78 %         |            |
-| HESAY    | EU       | Consumer Cyclical  |          nan |             nan |           nan |           nan |           nan |           1.79 |            |             | 0,64   | 4,82 %         |            |
-| MC.PA    | EU       | Consumer Cyclical  |          nan |             nan |           nan |           nan |           nan |           0    |            |             |        | 3,26 %         |            |
-| NVDA     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          84.15 |            |             | 0,37   | 0,25 %         |            |
-| AVGO     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          67.56 |            |             | 0,81   | 1,07 %         |            |
-| KLAC     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          60.22 |            |             | 0,49   | 1,04 %         |            |
-| LRCX     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          52.77 |            |             | 0,59   | 2,18 %         |            |
-| QCOM     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          20.83 |            |             |        | 3,63 %         |            |
-| LMT      | US       | Industrials        |          nan |             nan |           nan |           nan |           nan |          71.64 |            |             | 8,36   | 2,71 %         |            |
-| LHX      | US       | Industrials        |          nan |             nan |           nan |           nan |           nan |          58.64 |            |             |        | 1,57 %         |            |
-| TRV      | US       | Financial Services |          nan |             nan |           nan |           nan |           nan |          43.17 |            |             | 0,45   | 1,03 %         |            |
-| KO       | US       | Consumer Defensive |          nan |             nan |           nan |           nan |           nan |          96.18 |            |             | 4,38   | 2,93 %         |            |
-| DELL     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          66.18 |            |             | 0,42   | 3,66 %         |            |
+| MSFT     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          73.12 |            |             | 0,17   | 0,99 %         |            |
+| ASML     | EU       | Technology         |          nan |             nan |           nan |           nan |           nan |          44.48 |            |             | 0,60   | 2,54 %         |            |
+| LIN      | EU       | Basic Materials    |          nan |             nan |           nan |           nan |           nan |          44.24 |            |             |        | 2,25 %         |            |
+| SU.PA    | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          54.6  |            |             |        | 3,31 %         |            |
+| SIE.DE   | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          36.3  |            |             |        | 8,23 %         |            |
+| RELX     | EU       | Industrials        |          nan |             nan |           nan |           nan |           nan |          90.28 |            |             | 1,22   | 0,19 %         |            |
+| LSEG.L   | EU       | Financial Services |          nan |             nan |           nan |           nan |           nan |          41.7  |            |             | 0,45   | 4,82 %         |            |
+| HESAY    | EU       | Consumer Cyclical  |          nan |             nan |           nan |           nan |           nan |           0    |            |             | 0,55   | 5,25 %         |            |
+| MC.PA    | EU       | Consumer Cyclical  |          nan |             nan |           nan |           nan |           nan |           1.97 |            |             |        | 3,53 %         |            |
+| NVDA     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          85.25 |            |             | 0,37   | 0,25 %         |            |
+| AVGO     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          66.44 |            |             | 0,86   | 1,03 %         |            |
+| KLAC     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          52.91 |            |             | 0,40   | 1,18 %         |            |
+| LRCX     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          49.55 |            |             | 0,46   | 2,55 %         |            |
+| QCOM     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          22.19 |            |             |        | 3,81 %         |            |
+| LMT      | US       | Industrials        |          nan |             nan |           nan |           nan |           nan |          71.95 |            |             | 8,63   | 2,65 %         |            |
+| LHX      | US       | Industrials        |          nan |             nan |           nan |           nan |           nan |          56.79 |            |             |        | 1,56 %         |            |
+| TRV      | US       | Financial Services |          nan |             nan |           nan |           nan |           nan |          37.75 |            |             | 0,45   | 1,04 %         |            |
+| KO       | US       | Consumer Defensive |          nan |             nan |           nan |           nan |           nan |          85.27 |            |             | 4,04   | 3,10 %         |            |
+| DELL     | US       | Technology         |          nan |             nan |           nan |           nan |           nan |          63.84 |            |             | 0,36   | 3,70 %         |            |
