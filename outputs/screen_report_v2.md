@@ -1,4 +1,4 @@
-# Weekly Screen — v2 (2026-03-08)
+# Weekly Screen — v2 (2026-03-09)
 
 Top 20 by **Meta‑Score** (combined Buffett/Lynch/Icahn/Soros/Simons):
 
